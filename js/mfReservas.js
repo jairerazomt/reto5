@@ -170,7 +170,7 @@ function actualizarReservation(idElemento) {
             startDate: $("#startDate").val(),
             devolutionDate: $("#devolutionDate").val(),
             status: $("#status").val(),
-            audience:{id: +$("#select-audience").val()},
+            audience:{id: +$("#select-skate").val()},
             client:{idClient: +$("#select-client").val()},
         }
 
