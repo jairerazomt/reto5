@@ -23,7 +23,7 @@ function autoInicioAudience(){
         datatype:"JSON",
         success:function(respuesta){
         
-            let $select = $("#select-audience");
+            let $select = $("#select-skate");
             $.each(respuesta, function (id, name) {
                 $select.append('<option value='+name.id+'>'+name.name+'</option>');
             }); 
@@ -40,7 +40,7 @@ function agregarReservation() {
             startDate: $("#startDate").val(),
             devolutionDate: $("#devolutionDate").val(),
             status: $("#status").val(),
-            audience:{id: +$("#select-audience").val()},
+            audience:{id: +$("#select-skate").val()},
             client:{idClient: +$("#select-client").val()},
         }
 
@@ -100,7 +100,7 @@ function pintarRespuestaReservation(response){
             myTable+="<td>"+response[i].startDate+"</td>";
             myTable+="<td>"+response[i].devolutionDate+"</td>";
             myTable+="<td>"+response[i].status+"</td>";
-            myTable+="<td>"+response[i].audience.name+"</td>";
+            myTable+="<td>"+response[i].skate.name+"</td>";
             myTable+="<td>"+response[i].client.name+"</td>";
             myTable+='<td><button  onclick="borrarReservation(' + response[i].idReservation + ')">Borrar Reserva!</button></td>';
             myTable+='<td><button  onclick="cargarDatosReservation(' + response[i].idReservation + ')">Editar Reserva!</button></td>';
