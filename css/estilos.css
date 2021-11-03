@@ -1,0 +1,15 @@
+body {
+    background: rgb(255,255,255);
+    background-color: -moz-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(132,209,196,1) 35%, rgba(0,212,255,1) 100%) !important;
+    background-color: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(132,209,196,1) 35%, rgba(0,212,255,1) 100%) !important;
+    background-color: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(132,209,196,1) 35%, rgba(0,212,255,1) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#00d4ff",GradientType=1) !important;
+  }
+
+  #inputs-container {
+      display: grid !important;
+  }
+
+footer {
+    background: linear-gradient(0deg, #e3ffe7 0%, #d9e7ff 100%) !important;
+  } 

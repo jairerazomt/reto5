@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Front Final</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Este es un documento HTML5">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script type="text/javascript" src="js/mfReservas.js"></script>
+    </head>
+
+    <body>
+        <header id="cabeceralogo">
+            <div class="alert alert-success">
+                <h1>Reservaciones</h1>
+            </div>
+        </header>
+
+        <nav id="menuprincipal" class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="Auditorios.html">Auditorios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Categorias.html">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Mensajes.html">Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reservaciones.html">Reservaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reportes.html">Reportes</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+                <div class="card" style="width: 100%;">
+                    <div class="card-header p-4.5">
+                    "Complete los campos para el registro de reservación.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <label class="m-1 ml-4 font-weight-light">Fecha Inicio Alquiler: Seleccione fecha de inicio para su reservación</label>
+                        <li class="list-group-item"><input class="controlReservation" type="date" id="startDate" placeholder="startDate"><br></li>
+                        <label class="m-1 ml-4 font-weight-light">Fecha Devolución: Seleccione fecha de devolución del auditorio</label>
+                        <li class="list-group-item"><input class="controlReservation" type="date" id="devolutionDate" placeholder="devolutionDate"><br></li>
+                        <label class="m-1 ml-4 font-weight-light">Status: Ingrese un estado a la Reservacion "completed / cancelled para confirmar</label>
+                        <li class="list-group-item"><input class="controlReservation" type="text" id="status" placeholder="completed or cancelled"></li>
+                        
+                        <div class="p-3 m-2 card" style="width: 100%;"><select id="select-client"></select></div>
+
+                        <script type="text/javascript">
+                            window.onload = autoInicioRelacionCliente();
+                        </script>
+        
+                        <div class="p-3 m-2 card" style="width: 100%;"><select id="select-auditorio"></select></div>
+        
+                        <script type="text/javascript">
+                            window.onload = autoInicioSkate();
+                        </script>
+                    </ul>
+                </div>
+
+                <button type="button" class="m-4 btn btn-lg btn-light btn-outline-info" onclick=" agregarReservation()">Confirmar Reserva</button>
+
+                 <div class="card" style="width: 100%;" id="miListaReservation"></div>
+
+                 <footer class="text-secondary mb-2 fixed-bottom p-4 position-absolute font-weight-bold">
+                    <p class="text-end">By Jairerazomt. Bogotá Colombia 2021</p>
+                </footer> 
+
+    </body>
+</html>

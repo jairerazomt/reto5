@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Front Final</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Este es un documento HTML5">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script type="text/javascript" src="js/mfMensajes.js"></script>   
+    </head>
+
+    <body>
+        <header id="cabeceralogo">
+            <div class="alert alert-success">
+                <h1>Mensajes</h1>
+            </div>
+        </header>
+
+        <nav id="menuprincipal" class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="Auditorios.html">Auditorios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Categorias.html">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Mensajes.html">Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reservaciones.html">Reservaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reportes.html">Reportes</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div id="inputs-container" class="m-4">
+            <div id="resultado1" class="position-sticky p-1 m-3"></div>
+     
+            <div class="card m-auto" style="width: 100%;">
+                <div class="card-header p-4.5">
+                  "Campo para consultar y dejar mensajes de nuestros auditorios.
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <label class="m-1 ml-4 font-weight-light">Nuevo mensaje:</label>
+                        <li class="list-group-item"><input type="text" style="width: 100%;"id="messagetext" placeholder="mensaje"><br></li>
+                    </ul>
+                    <button type="button" class="mx-auto p-1 m-3 ml-1 btn btn-lg btn-light btn-outline-info" style="width: 92%;" onclick="guardarInformacionMensajes()">Guardar Mensajes</button>
+                        <div class="p-3 m-2 card" style="width: 99%;">
+                            <select id="select-client"></select>
+                        </div>
+                        <div class="p-3 m-2 card" style="width: 99%;">
+                            <select id="select-skate"></select>
+                        </div>
+                </div>
+                
+            </div>
+
+        <div id="resultadoMensajes" class="card m-auto" style="width: 100%;"></div>
+
+        <script type="text/javascript"> 
+            window.onload = autoInicioMensajes();
+        </script>
+
+        <script type="text/javascript">
+            window.onload = autoInicioRelacionCliente();
+        </script>
+
+        <script type="text/javascript">
+            window.onload = autoInicioAuditorio();
+        </script>
+
+        <footer class="text-secondary mb-2 fixed-bottom p-4 position-absolute font-weight-bold">
+            <p class="text-end">By Jairerazomt. Bogotá Colombia 2021</p>
+        </footer> 
+
+    </body>
+</html>
